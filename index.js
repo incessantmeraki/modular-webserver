@@ -1,16 +1,28 @@
 var router = require('./router.js')
+var fs = require('fs')
 var http = require('http')
 var hyperstream = require('hyperstream')
 
 var server = http.createServer( function (req, res) {
-  // pass in requested path to router
+  // pas requested url path to router
   var m = router.match(req.url)
 
-  //if there is route for path
+  //invoke render function
   if (m) 
-    res.end(m.fn(m)) //reply back with output of function in routes
+    render(m)
   else 
-    res.end('Path not found')
+    res.end('404 not found')
+
+  //templating engine
+  function render(m) {
+    var html = m.fn(m)
+    fs.createReadStream('./public/index.html')
+      .pipe(hyperstream( {
+        '#container': html
+      }))
+      .pipe(res)
+  }
+
 })
 
 server.listen(8000)

@@ -5,7 +5,13 @@ module.exports = router
 
 
 router.addRoute('/', function (m) {
-  return `<body>
-    <h1> Welcome to main Page </h1>
+  return `
+    <h2>Index page</h2>
+  `.toString()
+})
+
+router.addRoute('/test', function (m) {
+  return `
+    <h2>Test page</h2>
   `.toString()
 })
