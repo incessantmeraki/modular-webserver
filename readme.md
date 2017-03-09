@@ -4,9 +4,9 @@ Simple and small modular web framework
 
 It uses follwing modules
 - nodejs core http module for server
-- routes module for routing
-- *ecstatic to serve static fies
-- yo-yo and hyperstream for templating
+- [routes](https://github.com/aaronblohowiak/routes.js) module for routing
+- [ecstatic](https://github.com/jfhbrook/node-ecstatic) to serve static fies
+- [yo-yo](https://github.com/maxogden/yo-yo) and [hyperstream](https://github.com/substack/hyperstream) for templating
 
 ## Usage
 
