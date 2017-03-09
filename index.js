@@ -27,4 +27,6 @@ var server = http.createServer( function (req, res) {
 
 })
 
-server.listen(8000)
+server.listen(8000, function() {
+  console.log('Server listening on port number 8000')
+})
