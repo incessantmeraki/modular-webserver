@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ecstatic": "^2.1.0",
     "hyperstream": "^1.2.2",
     "routes": "^2.1.0",
     "yo-yo": "^1.4.0"

@@ -2,6 +2,8 @@ var router = require('./router.js')
 var fs = require('fs')
 var http = require('http')
 var hyperstream = require('hyperstream')
+var ecstatic = require('ecstatic')
+var st = ecstatic('./public')
 
 var server = http.createServer( function (req, res) {
   // pas requested url path to router
@@ -11,7 +13,7 @@ var server = http.createServer( function (req, res) {
   if (m) 
     render(m)
   else 
-    res.end('404 not found')
+    st(req,res)
 
   //templating engine
   function render(m) {

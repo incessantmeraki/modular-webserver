@@ -3,7 +3,6 @@ var html = require('yo-yo')
 
 module.exports = router
 
-
 router.addRoute('/', function (m) {
   return `
     <h2>Index page</h2>
