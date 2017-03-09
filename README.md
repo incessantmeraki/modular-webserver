@@ -2,7 +2,7 @@
 
 Simple and small modular web framework
 
-It uses follwing modules
+It uses following modules
 - nodejs core [http](https://nodejs.org/api/http.html) module for server
 - [routes](https://github.com/aaronblohowiak/routes.js) module for routing
 - [ecstatic](https://github.com/jfhbrook/node-ecstatic) to serve static fies
